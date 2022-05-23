@@ -1,0 +1,8 @@
+.card{
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: aquamarine;
+}
+.card-text{
+    text-align: center;
+}

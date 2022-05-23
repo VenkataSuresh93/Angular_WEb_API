@@ -1,0 +1,31 @@
+h2{
+  text-align: center;
+}
+h1{
+  text-align: center;
+  color: darkgreen;
+  margin-top: 10rem;
+  font-size: 50px;
+  text-shadow: rgb(213, 238, 213);
+}
+h3{
+  margin-top: 15rem;
+  font-size: 100px;
+  text-align: center;
+}
+
+.img{
+  width: 300;
+  height: 400px;
+  
+}
+.imgdiv{
+  width: 10%;
+  height: 80%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

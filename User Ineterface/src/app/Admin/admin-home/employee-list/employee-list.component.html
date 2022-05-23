@@ -1,0 +1,40 @@
+<body>
+
+  <table class="table table-bordered" style="border:2px;padding: 20px;">
+  
+      
+    <thead>
+        <th>Id</th> 
+        <th>AccountNo</th>  
+        <th> EmployeeCode</th>
+        <th>FirstName</th>
+         <th> LastName </th>
+         <th>Email</th>
+         <th>Delete</th>
+    </thead>
+  
+          
+       <tbody>
+        <tr *ngFor="let accountDetail of accountDetails">
+            <td>{{accountDetail.id}}</td> 
+            <td>{{accountDetail.accountNo}}</td>  
+            <td> {{accountDetail.employeeCode}}</td>
+            <td>{{accountDetail.firstName}} </td>
+             <td> {{accountDetail.lastName}}</td>
+            <td>{{accountDetail.email}}</td>
+            
+         <td class="tbl2">
+          <button type="button" class="btn btn-info" matTooltip="Click Edit Button" [routerLink]="['/employee-details/'+accountDetail.id]" >View Detail</button>
+        </td> 
+        <td class="tbl2">
+          <button type="button" class="btn btn-danger" matTooltip="Click Delete Button" (click)="deleteEmployee(accountDetail.id)">Delete</button>
+        </td>
+             
+           </tr>
+       </tbody>
+  
+       
+  </table>
+  <div><a routerLink="/admin-home"><h3><button class="btn btn-primary  " style="margin-right:5px;" type="next">Back</button></h3></a></div>
+    
+  </body>

@@ -1,0 +1,39 @@
+<body>
+
+  <table class="table table-bordered" style="border:2px;padding: 20px; ">
+
+    <tr>
+      <th> Id</th>
+      <th>AccountNo:</th>
+      <th> EmployeeCode:</th>
+      <th>FirstName: </th>
+      <th> LastName: </th>
+      <th>FatherName:</th>
+      <th> Gender: </th>
+      <th>Email:</th>
+      <th>BirthDate:</th>
+      <th> Opendate:</th>
+    </tr>
+    <tr *ngFor="let accountDetail of accountDetails">
+      <td> {{accountDetail.id}}</td>
+      <td>{{accountDetail.accountNo}}</td>
+      <td> {{accountDetail.employeeCode}}</td>
+      <td>{{accountDetail.firstName}} </td>
+      <td> {{accountDetail.lastName}}</td>
+      <td>{{accountDetail.fatherName}}</td>
+      <td> {{accountDetail.gender}} </td>
+      <td>{{accountDetail.email}}</td>
+      <td>{{accountDetail.birthDate}}</td>
+      <td>{{ accountDetail.opendate}}</td>
+
+
+      <!-- <td class="tbl2">
+                    <button type="button" class="btn btn-danger" matTooltip="Click Delete Button" (click)="deleteEmployee(accountDetail.id)">Delete</button>
+                  </td> -->
+    </tr>
+  </table>
+  <div><a routerLink="/admin-home">
+      <h3><button class="btn btn-primary  " style="margin-right:5px;" type="next">Back</button></h3>
+    </a></div>
+
+</body>

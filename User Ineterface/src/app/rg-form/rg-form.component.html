@@ -1,0 +1,61 @@
+
+<p class="display-6 text-center text-secondary mt-0">User Registration Form</p>
+<div class="col-md-10 col-md-offset-3" style="margin-left: 402px;">
+<form [formGroup] = "AccountDetails" (ngSubmit) = "onClickSubmit(AccountDetails.value)" autocomplete="off" ><br>
+    
+  
+     <div class="form-group mt-1" >
+        <label class="control-label col-sm-2" for="firstname"><b>Employee-Code:-</b></label>
+        <input  type="text" placeholder="Emp Code"  id="empcode" name="empcode" formControlName="employeeCode" required>
+         <!--<span class="text-danger" formGroup="(empcode.touched || formGroup.submitted) && empcode.errors?.required">EmpCode is required</span>--> 
+      </div><br>                    
+                                      
+      <div class="form-group mt-1" >
+        <label class="control-label col-sm-2" for="firstname"><b>First Name:-</b></label>
+        <input  type="text" placeholder="First Name"  id="firstname" name="firstname" formControlName="firstName" required >
+        <!-- <span class="text-danger" formGroup="(firstname.touched || formGroup.submitted) && firstname.errors?.required">First name is required</span> -->
+      </div><br> 
+                      
+      <div class="form-group mt-1" >
+        <label class="control-label col-sm-2" for="lastname"><b>Last Name:-</b></label>
+        <input  type="text" placeholder="last Name"  id="lastname" name="lastname" formControlName="lastName" required >
+        <!-- <span class="text-danger" formGroup="(lastname.touched || formGroup.submitted) && lastname.errors?.required">Last name is required</span> -->
+      </div><br> 
+                      
+      <div class="form-group mt-1" >
+        <label  class="control-label col-sm-2" for="fathername"><b>Father Name:-</b></label>
+        <input  type="text"  placeholder="Father Name"  id="fathername" name="fathername" formControlName="fatherName" required >
+        <!-- <span class="text-danger" formGroup="(fathername.touched || formGroup.submitted) && fathername.errors?.required">Father name is required</span> -->
+      </div><br>
+      
+      <div class="custom-control custom-radio"  >
+        <label  class="control-label col-sm-2" for="fathername"><b>Gender:-</b></label>
+        
+        <input id="male" type="radio" formControlName="gender" value="male" name="gender" ngModel>
+        <label class="custom-control-label" for="male">Male</label>
+     
+        <input id="female" type="radio" formControlName="gender" value="female" name="gender" ngModel>
+        <label class="custom-control-label" for="female">Female</label>
+     </div><br>
+
+      <div class="form-group mt-1" >
+        <label  class="control-label col-sm-2" for="fathername"><b>Date-of-Birth:-</b></label>
+        <input  type="date"  placeholder="DOB"  id="birthDate" name="birthDate" formControlName="birthDate" required >
+        <!-- <span class="text-danger" formGroup="(fathername.touched || formGroup.submitted) && fathername.errors?.required">Father name is required</span> -->
+      </div><br>
+                      
+   
+    <div class="form-group mt" >
+        <label class="control-label col-sm-2" for="email"><b>Email ID:-</b></label>
+        <input  type="email"  placeholder="EmailId@gmail.com"  id="email" name="email" formControlName="email" required >
+        <!-- <span class="text-danger" formGroup="(email.touched || formGroup.submitted) && email.errors?.required">Email name is required</span> -->
+      </div><br>
+          
+       <div style="text-align: center10px;"> 
+        <a  routerLink = "/login" ><button class="btn btn-primary  " style="margin-right:5px;" type="back">Back</button></a>  
+       <button type="submit" [disabled]="!AccountDetails.valid" class="btn btn-primary" style="margin-right:5px;">Save</button>
+        
+      </div> 
+    </form>  
+</div>
+

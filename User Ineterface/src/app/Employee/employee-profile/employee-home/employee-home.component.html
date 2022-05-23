@@ -1,0 +1,33 @@
+<h2><u>Employee HOME</u></h2>
+
+<ul class="nav justify-content-center">
+     <li class="nav-item">
+       <a class="nav-link" routerLink="['/employee-profile/'+user.name]" ><h4></h4></a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/view-transaction"><h4>View-transaction</h4></a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/employee-balance" ><h4>View-Balance</h4></a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/withdraw" ><h4>Transaction</h4></a>
+     </li>  
+     <li class="nav-item">
+      <a class="nav-link" routerLink="/home" ><h4>Logout</h4></a>
+     </li>      
+     
+    
+   
+     
+   </ul>
+   
+   <h1>{{user.name}}</h1>
+   
+  
+   <div class="imgdiv">
+    <img src="data:image/png;base64,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" alt="">
+  <div class="centered"><h2>welcome!</h2></div>
+  </div>
+   
+  

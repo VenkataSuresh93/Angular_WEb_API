@@ -1,0 +1,74 @@
+
+
+<p class="display-6 text-center text-secondary mt-0 font-weight-bold">Personal Bank Details</p>
+ <div class="col-md-10 col-md-offset-3" style="margin-left: 402px;">
+ <form [formGroup] = "PersonalBankDetails" (ngSubmit) = "onClickSubmit(PersonalBankDetails.value)" autocomplete="off" ><br>
+   
+
+    <div class="form-group mt-1" >
+        <label class="control-label col-sm-2" for=""><b>BankName:-</b></label>
+        
+        <input  type="text" placeholder="bankName"  id="bankName" name="bankName" formControlName="bankName" required >
+         <!--<span class="text-danger" *ngIf="(bankName.touched || formRef.submitted) && bankName.errors?.required" >bankName is required</span> -->
+       </div><br>
+
+       <div class="form-group mt-1" >
+        <label  class="control-label col-sm-2" for="accountNo"><b>AccountNo:-</b></label>
+        <input  type="text"  placeholder="accountNo"  id="accountNo" name="accountNo" formControlName="accountNo" minlength="10" maxlength="16" required>
+        <!-- <span class="text-danger" *ngIf="(accountNo.touched || formRef.submitted) && accountNo.errors?.required" >A/C No is required</span> -->
+       </div><br>
+
+       <div class="form-group mt-1" >
+        <label class="control-label col-sm-2" for="IFSC"><b>IFSC Code:-</b></label>
+        <input  type="text" placeholder="Ifsc code" id="IFSC" name="IFSC" formControlName="ifscCode" required>
+        <!-- <span class="text-danger" *ngIf="(IFSC.touched || formRef.submitted) && IFSC.errors?.required" >IFSC code is required</span> -->
+       </div>  <br>  
+    <div><button type="submit"  [disabled]="!PersonalBankDetails.valid"  class="btn btn-primary">Submit</button></div>
+    
+    <!-- <div><a  routerLink = "/login" ><button class="btn btn-primary  " style="margin-right:5px;" type="next">Next</button></a></div>  -->
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <form [formGroup] = "formdata1" (ngSubmit) = "onClickSubmit(formdata1.value)" >
+       <input type = "text"  name = "emailid" formControlName="mailAddress">
+       <br/>
+       
+       <input type = "password"  name="passwd"  formControlName = "passwd">
+       <br/>
+       
+       <input type = "submit" class = "forsubmit" value = "Log In">
+    </form>
+ </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

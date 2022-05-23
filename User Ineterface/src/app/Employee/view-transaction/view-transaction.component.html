@@ -1,0 +1,42 @@
+<style>
+  table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+</style>
+<body>    
+  <table border="8" class="table table-bordered" style="border:2px;padding: 20px; border: 2px;">
+  
+      
+      <tr>
+          <th>Id</th> 
+          <th>TransactionDate</th>  
+          <th>FromAccountNo</th> 
+          <th>ToAccountNo</th> 
+          <th>Amount</th>
+      </tr>
+  
+       
+  
+      <tr *ngFor="let withdraws of withdraw">
+          <td>{{withdraws.id}}</td> 
+          <td>{{withdraws.withdrawDate}}</td>  
+          <td>{{withdraws.fromAccountNo}}</td> 
+          <td>{{withdraws.toAccountNo}}</td> 
+          <td> {{withdraws.amount}}</td>     
+        </tr>
+  
+  </table>
+  
+
+     <div><a routerLink="/employee-home">
+      <h3><button class="btn btn-primary  " style="margin-right:5px;" type="next">Back</button></h3>
+    </a></div>
+  </body>

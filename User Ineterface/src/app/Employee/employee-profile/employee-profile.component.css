@@ -1,0 +1,13 @@
+table{
+  width: 50%;
+  margin: auto;
+}
+h3{
+  margin-top: 2rem;
+  font-size: 100px;
+  text-align: center;
+}
+
+body{
+background-color: rgb(135, 207, 207);
+}
